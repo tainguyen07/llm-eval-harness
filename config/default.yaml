@@ -1,0 +1,31 @@
+run:
+  name: qa-default
+  prompt_template: |
+    Answer the question concisely.
+    Question: {question}
+    Answer:
+  dataset_path: examples/data/qa.jsonl
+  concurrency: 16
+  scorers:
+    - exact_match
+    - token_f1
+  judge:
+    model: gpt-4o-mini
+    temperature: 0.0
+    adapter: openai
+  retry:
+    attempts: 3
+    backoff: 0.5
+    max_backoff: 10.0
+
+gates:
+  min_exact_match: 0.7
+  max_p99_ms: 3000.0
+  max_cost_usd: 1.0
+
+report:
+  html: true
+  markdown: true
+  csv: true
+  json: true
+  junit: true

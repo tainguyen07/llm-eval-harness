@@ -1,0 +1,15 @@
+run:
+  name: pairwise-ablation
+  prompt_template: "{question}"
+  dataset_path: examples/data/qa.jsonl
+  concurrency: 8
+  scorers:
+    - exact_match
+  judge:
+    model: claude-sonnet-4-5
+    adapter: anthropic
+  retry:
+    attempts: 3
+
+gates:
+  min_overall: 0.6
