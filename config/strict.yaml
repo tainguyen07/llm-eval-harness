@@ -1,0 +1,31 @@
+run:
+  name: qa-strict
+  prompt_template: |
+    You are a precise assistant. Reply with the single best answer only.
+    Q: {question}
+    A:
+  dataset_path: examples/data/qa.jsonl
+  concurrency: 32
+  scorers:
+    - exact_match
+    - token_f1
+    - fuzzy_match
+    - json_schema
+  judge:
+    model: claude-sonnet-4-5
+    adapter: anthropic
+    temperature: 0.0
+  retry:
+    attempts: 5
+    backoff: 1.0
+
+gates:
+  min_exact_match: 0.85
+  min_token_f1: 0.9
+  max_p99_ms: 1500.0
+  max_cost_usd: 0.5
+
+report:
+  html: true
+  markdown: true
+  json: true
