@@ -1,0 +1,5 @@
+{"id": "q-001", "inputs": {"question": "What is the capital of France?"}, "expected": "Paris"}
+{"id": "q-002", "inputs": {"question": "What is 2 + 2?"}, "expected": "4"}
+{"id": "q-003", "inputs": {"question": "Who wrote Hamlet?"}, "expected": "William Shakespeare"}
+{"id": "q-004", "inputs": {"question": "What is the boiling point of water in Celsius?"}, "expected": "100"}
+{"id": "q-005", "inputs": {"question": "How many planets are in the Solar System?"}, "expected": "8"}

@@ -1,0 +1,3 @@
+{"id": "c-001", "inputs": {"prompt": "Cancel my subscription"}, "expected": "Sorry to hear that. I can help you cancel. May I have your account email?"}
+{"id": "c-002", "inputs": {"prompt": "What's your refund policy?"}, "expected": "We issue refunds within 30 days of purchase."}
+{"id": "c-003", "inputs": {"prompt": "Track my order"}, "expected": "Sure — please share your order number."}
